@@ -1,8 +1,8 @@
-import ntplib
+#import ntplib
 import time
 import pytz
 from datetime import datetime, timezone, timedelta
-import win32api
+#import win32api
 import multiprocessing
 from playsound import playsound
 
@@ -130,7 +130,7 @@ def printMessage(msg, matrix):
 
     return 0  # message is still scrolling through display
 
-
+'''
 def set_system_time(new_time):
     win32api.SetSystemTime(new_time.year, new_time.month, new_time.weekday(),
                            new_time.day, new_time.hour, new_time.minute,
@@ -151,7 +151,7 @@ def get_ntp_time(ntp_server='pool.ntp.org', target_timezone_str='US/Eastern'):
     target_time = utc_time.astimezone(target_timezone)
 
     return target_time
-
+'''
 
 def millis():
     return int(time.time() * 1000)
@@ -213,18 +213,18 @@ def get_formatted_time(matrix):
     return formatted_time
 
 
-def get_current_epoch_time():
+'''def get_current_epoch_time():
     try:
         ntp_client = ntplib.NTPClient()
         response = ntp_client.request('pool.ntp.org')
         return response.tx_time  # This returns the time in seconds since the epoch
     except Exception as e:
         print(f"Could not get NTP time: {e}")
-        return None
+        return None'''
 
 
 def get_next_time_target(hour, minute, target_timezone_str='US/Eastern'):
-    current_epoch_time = get_current_epoch_time()
+    current_epoch_time = datetime.now().timestamp() # get_current_epoch_time()
     if current_epoch_time is None:
         print("Failed to get the current time")
         return False

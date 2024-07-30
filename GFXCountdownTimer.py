@@ -10,8 +10,8 @@ from PyQt5.QtCore import QTimer, Qt, QEvent, QSize, QPoint, QThread, QObject, py
 
 from fontLetters import *
 from ColorFXUtils import *
-from CountDownTimer import calc_time_difference, get_formatted_time, get_next_time_target, get_ntp_time, \
-    time_msg_vars, time_left_in_countdown, printMessage, set_system_time, messages, PlaySound
+from CountDownTimer import calc_time_difference, get_formatted_time, get_next_time_target, \
+    time_msg_vars, time_left_in_countdown, printMessage, messages, PlaySound
 
 APP_KILLED = False  # global flag signals loops/threads to exit when app needs to quit
 
