@@ -3,10 +3,10 @@
 ## Description
 A port of a program originally written for an ESP32 powered LED matrix display. Using the power of Python3 and
 multicore PC architecture, I have painstakingly brute forced the Emulated experience of Adafruit_Matrix and FastLED
-backed animated LED scrolling display. Entertain friends and family alike as you count down to the golden 'hour'.
+backed animated LED scrolling display. Entertain friends and family alike as you count down to the golden 'hour'. \
 🌿 Happy 420 🌿
 
-Works on Windows and probably, macOS, and Linuxes too. I'll test it on those systems someday. 
+Works on Windows, macOS, and probably Linuxes too. I'll test it on one of those someday. 
 
 ## Table of Contents
 - [Description](#description)
@@ -33,11 +33,12 @@ Works on Windows and probably, macOS, and Linuxes too. I'll test it on those sys
 This program requires the following python modules:
 1. PyQT5
 2. pytz
-3. US/Eastern timezone clocks... wait that's not a python module. (change this in code in a few places _*Ctrl-F is your friend_)
+3. numpy
+4. playsound
 
 ## Usage
-Just type:```python GFXCountdownTimer.py``` into your console of choice
-or double-click the file in your OS if your system is so configured
+Install required python modules by typing: ```pip install -r requirements.txt``` into your console of choice. 
+Then enter:```python GFXCountdownTimer.py``` or double-click the file if your system is so configured.
 
 ## Screenshot
 ![Project Screenshot](scrnshot.gif)
@@ -55,7 +56,7 @@ MIT License
 
 MIT License
 
-Copyright (c) [2024] [Dave Quinn]
+Copyright (c) 2024 Dave Quinn
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
